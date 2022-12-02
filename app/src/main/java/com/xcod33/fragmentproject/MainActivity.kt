@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val btnFragment1 = findViewById<Button>(R.id.btnFragment1)
         val btnFragment2 = findViewById<Button>(R.id.btnFragment2)
+        val btnFragment3 = findViewById<Button>(R.id.btnFragment3)
 
         btnFragment1.setOnClickListener() {
             val fr = supportFragmentManager.beginTransaction()
@@ -23,6 +24,12 @@ class MainActivity : AppCompatActivity() {
         btnFragment2.setOnClickListener() {
             val fr = supportFragmentManager.beginTransaction()
             fr.replace(R.id.f1Movie, Fragment2())
+            fr.commit()
+        }
+
+        btnFragment3.setOnClickListener() {
+            val fr = supportFragmentManager.beginTransaction()
+            fr.replace(R.id.f1Movie, Fragment3())
             fr.commit()
         }
 

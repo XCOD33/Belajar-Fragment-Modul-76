@@ -4,14 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
     tools:context=".Fragment2">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Ini Fragment 2"
-        android:gravity="center"
-        />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:padding="7dip"
+            android:text="Informasi Film"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tabel"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="200sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TableLayout
+            android:id="@+id/tabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/detail"
+            tools:ignore="UselessParent">
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090"/>
+
+            <TableRow>
+                <TextView
+                    android:text="Title"
+                    style="@style/TableTextStyleBold"/>
+                <TextView
+                    android:text="Interstellar"
+                    android:layout_column="10"
+                    style="@style/TableTextStyle"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Genre"
+                    style="@style/TableTextStyleBold"/>
+                <TextView
+                    android:text="Adventure, Drama, Sci-Fi"
+                    android:layout_column="10"
+                    style="@style/TableTextStyle"/>
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    style="@style/TableTextStyleBold"
+                    android:layout_width="98dp"
+                    android:text="Release" />
+                <TextView
+                    android:text="07 Nov 2014"
+                    android:layout_column="10"
+                    style="@style/TableTextStyle"/>
+            </TableRow>
+            <TableRow
+                android:gravity="center_vertical">
+                <TextView
+                    android:text="Stars"
+                    style="@style/TableTextStyleBold"/>
+                <TextView
+                    android:text="Ellen Burstyn, John Lithgow"
+                    android:layout_column="10"
+                    style="@style/TableTextStyle"/>
+            </TableRow>
+            <TableRow
+                android:gravity="center_vertical">
+                <TextView
+                    android:text="Duration"
+                    style="@style/TableTextStyleBold"/>
+                <TextView
+                    android:text="169 min"
+                    android:layout_column="10"
+                    style="@style/TableTextStyle"/>
+            </TableRow>
+            <TableRow
+                android:gravity="center_vertical">
+                <TextView
+                    android:text="Director"
+                    style="@style/TableTextStyleBold"/>
+                <TextView
+                    android:text="Christopher Nolan"
+                    android:layout_column="10"
+                    style="@style/TableTextStyle"/>
+            </TableRow>
+            <TableRow
+                android:gravity="center_vertical">
+                <TextView
+                    android:text="Country"
+                    style="@style/TableTextStyleBold"/>
+                <TextView
+                    android:text="Canada, UK, USA"
+                    android:layout_column="10"
+                    style="@style/TableTextStyle"/>
+            </TableRow>
+
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
